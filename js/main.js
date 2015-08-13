@@ -17,11 +17,11 @@ $(document).on('ready', function(){
 			},
 			
 			"your-address": {
-				required: true,
+				required: true
 			},
 			
 			"your-city": {
-				required: true,
+				required: true
 			},
 			
 			"your-state": {
@@ -34,7 +34,7 @@ $(document).on('ready', function(){
 				required: true,
 				digits: true,
 				minlength: 5,
-				maxlength: 5,
+				maxlength: 5
 			},
 			
 			"card-holder-name": {
@@ -44,12 +44,15 @@ $(document).on('ready', function(){
 			
 			"card-number": {
 				required: true,
-				creditcard: true,
-				maxlength: 16
+				creditcard: true
 				},
 			
 			"expiry-month": {
-				required: true,
+				required: true
+			},
+			
+			"expiry-year": {
+				required: true
 			},
 			
 			"cvv": {
@@ -57,6 +60,15 @@ $(document).on('ready', function(){
 				digits: true,
 				minlength: 3,
 				maxlength: 3
+			},
+			
+			"shipping-method": {
+				required: true
+			},
+			
+			"comments": {
+				required: false,
+				maxlength: 499
 			}
 		},
 		//messages to display in case of error
@@ -91,12 +103,15 @@ $(document).on('ready', function(){
 			},
 			
 			"card-number": {
-				required: "Please enter your 16-digit credit card number",
-				maxlength: jQuery.validator.format("Please enter your 16-digit credit card number")
+				required: "Please enter your 16-digit credit card number"
 			},
 			
 			"expiry-month": {
-				required: "Please enter the expiration date"
+				required: "Please select the expiration month"
+			},
+			
+			"expiry-year": {
+				required: "Please select the expiration year"
 			},
 			
 			"cvv": {
@@ -104,7 +119,16 @@ $(document).on('ready', function(){
 				digits: jQuery.validator.format("Please enter the 3-digit security code"),
 				maxlength: "Please enter the 3-digit security code",
 				minlength: "Please enter the 3-digit security code"
+			},
+			
+			"shipping-method": {
+				required: "Please select a shipping method"
+			},
+			
+			"comments": {
+				maxlength: jQuery.validator.format("499 characters max")
 			}
 		}
 	});
 });
+
